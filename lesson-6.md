@@ -76,3 +76,97 @@ if age < minAge || age > maxAge {
 
 💡 Это задание поможет тебе научиться писать **чистый, понятный и устойчивый код**. Даже простая программа должна быть надёжной 💪
 
+Пример кода:
+
+```go
+/* Задача 4. Разрешение на ночную вечеринку
+
+Пользователь вводит:
+- Возраст
+- Разрешение от родителей (yes / no)
+- День недели (friday, saturday, sunday, monday, и т.д.)
+
+Создайте логические переменные:
+isLegal               - true, если возраст ≥ 18
+hasParentalPermission - true, если введено "yes"
+isWeekend             - true, если день — friday или saturday
+
+Создайте итоговую переменную для if:
+canGoToParty - true, если человек ≥ 18 ИЛИ есть разрешение и это выходной
+
+Вывод: "Можете проходить" или "Мы не можем вас пропустить"
+*/ 
+
+package main
+
+import "fmt"
+
+
+func main() {
+	fmt.Println("Ваш возраст:")
+
+	var age int
+	fmt.Scanln(&age)
+
+	const minAge = 1
+	const maxAge = 150
+
+	if age < minAge || age > maxAge {
+		fmt.Println("Некорретный возраст")
+		return
+	}
+
+	fmt.Println("Есть ли разрешение от родителей? (yes/no)")
+
+	var parentalPermission string
+	fmt.Scanln(&parentalPermission)
+
+	const yes = "yes"
+	const no = "no"
+
+	if parentalPermission != yes && parentalPermission != no {
+		fmt.Println("Некорректный ответ на вопрос")
+		return
+	}
+
+	fmt.Println("Введите день недели:")
+	
+	var dayOfWeek string
+	fmt.Scanln(&dayOfWeek)
+		
+	const monday = "monday"
+	const tuesday = "tuesday"
+	const wednesday = "wednesday"
+	const thurday = "thurday"
+	const friday = "friday"
+	const saturday = "saturday"
+	const sunday = "sunday"
+
+	if dayOfWeek != monday &&
+	   dayOfWeek != tuesday &&
+	   dayOfWeek != wednesday &&
+	   dayOfWeek != thurday &&
+	   dayOfWeek != friday &&
+	   dayOfWeek != saturday &&
+	   dayOfWeek != sunday {
+		
+		fmt.Println("Некорректный день недели")
+	}	
+
+	const legalAge = 18
+
+	isLegal := age >= legalAge
+
+	hasParentalPermission := parentalPermission == yes
+
+	isWeekend := dayOfWeek == friday || dayOfWeek == saturday
+
+	canGoToParty := isLegal || (hasParentalPermission && isWeekend)
+
+	if canGoToParty {
+		fmt.Println("Можете проходить")
+	} else {
+		fmt.Println("Мы не можем вас пропустить")
+	}
+}
+```
