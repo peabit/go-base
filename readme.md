@@ -693,7 +693,7 @@ func main() {
 
 	a := 10
 	b := 5
-    result := a > b
+	result := a > b
 
 	if result {
 		fmt.Println("a больше b")
