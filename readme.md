@@ -1,4 +1,4 @@
-**[🔥🔥🔥 Журнал 🔥🔥🔥](https://docs.google.com/spreadsheets/d/1X3zmX27NlGtjD-2oYWUjZB2PU-PxIqSv0Yswof4G6SQ/edit?usp=sharing)**
+🔥🔥🔥 **[ Журнал](https://docs.google.com/spreadsheets/d/1X3zmX27NlGtjD-2oYWUjZB2PU-PxIqSv0Yswof4G6SQ/edit?usp=sharing)** 🔥🔥🔥
 
 # Оглавление
 
